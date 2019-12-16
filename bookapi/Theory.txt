@@ -1,0 +1,19 @@
+C3P0-It is used for pooling purpose
+Instead of creating a new pool or connection evertime.It will
+leverage the existing pool.
+
+--------
+Spring WEBMVC
+WebMvcConfigurerAdapter-To tell spring that we are using spring mvc
+architecture.
+AbstractAnnotationConfigDispatcherServletInitializer- for pointing your spring
+application to app config file,web config file and dispatcher servlet mapping.
+
+HIBERNATE ANNOTATIONS
+@Entity(name="book")
+This class will create atable named book.
+@Id
+To make it primary key
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+To increment it by 1
+	

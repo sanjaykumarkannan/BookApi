@@ -1,0 +1,31 @@
+<form>
+
+        <input type="hidden" name="id" [(ngModel)]="book.id">
+   
+        <label for="title">Enter title:</label>
+        <input type="text" [(ngModel)]="book.title" name="title">
+       
+   
+    <br>
+    
+        <label for="authorName">Enter author:</label>
+        <input type="text" [(ngModel)]="book.author" name="authorName">
+    
+    <br>
+    <button (click)="addBook()">Add book</button>
+</form>
+
+<table border="1px">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let book of books">
+        <td>{{book.id}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td> <button (click)="getBookById(book.id)">Edit</button> |<button (click)="deleteBook(book.id)">Delete</button> </td>
+    </tr>
+</table>
